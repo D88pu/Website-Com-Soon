@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+<body>
+    <div class="container">
+        <img class="logo" src="https://cdn3.iconfinder.com/data/icons/social-media-2068/64/_d-512.png" width="23px">
+        <div class="content">
+            <p class="date">Website Is Under Maintenance</p>
+            <h1>We're <span>Launching</span>Soon</h1>
+            <div class="launch-time">
+                <div>
+                    <p id="days">00</p>
+                    <span>Days</span>
+                </div>
+                <div>
+                    <p id="hours">00</p>
+                    <span>Hours</span>
+                </div>
+                <div>
+                    <p id="minutes">00</p>
+                    <span>Minutes</span>
+                </div>
+                <div>
+                    <p id="Secondes">00</p>
+                    <span>Seconds</span>
+                </div>
+            </div>
+            <button type="button">Learn More <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-play-512.png" width="23px"></button>
+        </div>
+        <img class="rocket" src="https://media.istockphoto.com/id/1163028139/vector/space-rocket-icon.jpg?s=1024x1024&w=is&k=20&c=mctIJLY18Xvaj7BdiZLfpcr2nv8cJSu7xmiXI985ZuM=" width="23px">
+    </div>
+    <script>
+        var countDownDate = new Date("Oct 16, 2024 00:00:00").getTime();
+        var x = setInterval(function(){
+            var now = new Date().getTime();
+
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 *24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 *24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var Secondes = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("Secondes").innerHTML = Secondes;
+        },1000);
+    </script>
+</body>
+</html>
